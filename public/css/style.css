@@ -1,0 +1,109 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* Header */
+header {
+    background: #111827; /* dark charcoal */
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fbbf24; /* golden accent */
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fbbf24;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-login {
+    background: white;
+    color: #111827;
+}
+
+.btn-login:hover {
+    background: #d1d5db;
+}
+
+.btn-signup {
+    background: #fbbf24;
+    color: #111827;
+}
+
+.btn-signup:hover {
+    background: #f59e0b;
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #111827; /* same dark as header */
+    color: #f3f4f6;
+    padding: 30px 50px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer .footer-links {
+    margin-bottom: 15px;
+}
+
+footer .footer-links a {
+    color: #f3f4f6;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #fbbf24; /* golden hover */
+}
+
+footer p {
+    font-size: 14px;
+    color: #9ca3af; /* lighter gray */
+}
