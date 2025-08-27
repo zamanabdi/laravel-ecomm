@@ -19,8 +19,8 @@
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a href="/login" class="btn-login">Login</a>
-            <a href="/signup" class="btn-signup">Sign Up</a>
+            <a href="login-form" class="btn-login">Login</a>
+            <a href="signup-form" class="btn-signup">Sign Up</a>
         </div>
     </header>
 

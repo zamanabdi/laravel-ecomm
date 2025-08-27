@@ -172,7 +172,7 @@
     </section>
 
     <!-- Carousel Section -->
-    <section class="carousel-section">
+    <section class="carousel-section" style="margin-bottom: 150px;">
     <h2 style="margin-bottom:10px;">Featured Products</h2>
     <div class="carousel-wrapper">
         <button class="carousel-btn left" onclick="slideLeft()">&#10094;</button>
@@ -192,7 +192,7 @@
 
 
     <!-- Advertisement Section -->
-    <section class="ads">
+    <section class="ads" style="margin-bottom: 150px;">
         <img src="https://images.pexels.com/photos/8638307/pexels-photo-8638307.jpeg" alt="Ad 1">
         <img src="https://images.pexels.com/photos/6438287/pexels-photo-6438287.jpeg" alt="Ad 2">
     </section>
