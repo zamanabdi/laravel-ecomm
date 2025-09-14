@@ -11,12 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
-        // Register middleware aliases
     $middleware->alias([
-        'role.redirect' => \App\Http\Middleware\RoleMiddleware::class,
+        'customer.auth' => \App\Http\Middleware\EnsureCustomerIsLoggedIn::class,
     ]);
-    })
+})
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

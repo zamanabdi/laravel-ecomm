@@ -91,15 +91,16 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>Admin Panel</h2>
-        <a href="#">📊 Dashboard</a>
-        <a href="#">📦 Orders</a>
-        <a href="#">👥 Customers</a>
-        <a href="#">📈 Analytics</a>
+        <a href="dashboard">📊 Overview</a>
+        <a href="/admin/orders">📦 Orders</a>
+        <a href="manage_customers">👥 Customers</a>
+        <a href="manage_products">📦 Products</a>
         <a style="background-color: red; color:white; font-weight:bold;" href="/logout">⚙ Logout</a>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
+
         <h1>Welcome, Admin 👋</h1>
         <p style="margin-bottom: 20px;">Here’s an overview of your store performance:</p>
 
@@ -121,6 +122,7 @@
                 <p>0</p>
             </div>
         </div>
+        
     </div>
 </div>
 @endsection

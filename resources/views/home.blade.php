@@ -168,22 +168,97 @@
     <section class="hero">
         <h1>Welcome to Laravel E-Comm 🚀</h1>
         <p>Shop the latest products at unbeatable prices!</p>
-        <a href="/products" class="btn-shop">Shop Now</a>
+        <a href="/all_products" class="btn-shop">Shop Now</a>
     </section>
 
     <!-- Carousel Section -->
     <section class="carousel-section" style="margin-bottom: 150px;">
-    <h2 style="margin-bottom:10px;">Featured Products</h2>
+    <h2 style="margin-bottom:10px;">Popular Categories</h2>
     <div class="carousel-wrapper">
         <button class="carousel-btn left" onclick="slideLeft()">&#10094;</button>
         <div class="carousel" id="carousel">
+
+        <!-- Smart TVs -->
+         <a href="category/smart_tvs" style="text-decoration: none; color:inherit;">
+            <figure>
             <img src="https://m.media-amazon.com/images/I/81YQfMvc76L._SL1500_.jpg" alt="Product 1">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Smart TVs</figcaption>
+            </figure></a>
+
+
+            <!-- Smart Watches -->
+             <a href="category/smart_watches" style="text-decoration: none; color:inherit;">
+             <figure>
             <img src="https://m.media-amazon.com/images/I/81RSrpHOiaL._SX679_.jpg" alt="Product 2">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Smart Watches</figcaption>
+            </figure></a>
+
+
+            <!-- Sports Shoes -->
+             <a href="category/sports_shoes" style="text-decoration: none; color:inherit;">
+            <figure>
             <img src="https://m.media-amazon.com/images/I/81a+7L07LML._SX575_.jpg" alt="Product 3">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Sports Shoes</figcaption>
+            </figure>
+            </a>
+
+
+
+
+            <!-- Laptops -->
+             <a href="category/laptops" style="text-decoration: none; color:inherit;">
+             <figure>
             <img src="https://m.media-amazon.com/images/I/8133GVuhgwL._SL1500_.jpg" alt="Product 4">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Laptops</figcaption>
+            </figure></a>
+
+
+            <!-- Gaming Consoles -->
+             <a href="category/gaming_consoles" style="text-decoration: none; color:inherit;">
+             <figure>
             <img src="https://m.media-amazon.com/images/I/51T5YQij9sL.jpg" alt="Product 5">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Gaming Consoles</figcaption>
+            </figure></a>
+
+
+            <!-- Earbuds --><a href="category/earbuds" style="text-decoration: none; color:inherit;">
+             
+             <figure>
             <img src="https://m.media-amazon.com/images/I/51RaySTbIVL._SL1500_.jpg" alt="Product 6">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Earbuds</figcaption>
+            </figure></a>
+
+
+            <!-- Mens Wear -->
+             <a href="category/mens_wear" style="text-decoration: none; color:inherit;">
+             <figure>
             <img src="https://m.media-amazon.com/images/I/617DaZix1gL._SY879_.jpg" alt="Product 7">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Mens Wear</figcaption>
+            </figure>
+            </a>
+
+
+            
+            <!-- kids wear -->
+             <a href="category/kids_wear" style="text-decoration: none; color:inherit;">
+            <figure>
+            <img src="https://m.media-amazon.com/images/I/518Xd9hgamL._SX522_.jpg">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Kids Wear</figcaption>
+            </figure>
+           </a>
+
+             
+            <a href="category/womens_wear" style="text-decoration: none; color:inherit;">
+             
+            <figure>
+            <img src="https://m.media-amazon.com/images/I/61JDehxGVjL._SY879_.jpg">
+            <figcaption style="text-align: center; font-weight:bold; font-size:21px;">Womens Wear</figcaption>
+            </figure>
+            </a>
+            <!--  -->
+            
+            
+            
         </div>
         <button class="carousel-btn right" onclick="slideRight()">&#10095;</button>
     </div>

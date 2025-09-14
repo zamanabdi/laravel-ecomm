@@ -23,14 +23,21 @@ class LoginController extends Controller
         }
 
         // Save minimal info in session
-        $req->session()->put('customer', [
-            'id'    => $customer->id,
-            'name'  => $customer->username,
-            'email' => $customer->email,
-            'role'  => $customer->role,   // 'admin' or 'user'
+        session()->put('customer',[
+            'id'=>$customer->id,
+            'name'=>$customer->name,
+            'email'=>$customer->email,
+            'role'=>$customer->role
         ]);
 
-        // Return anything — middleware will intercept and redirect by role
-        return redirect('/'); // neutral redirect; will be overridden by middleware
+        // ✅ Redirect based on role
+        if (session('customer.role') === 'admin') {
+            return redirect('admin/dashboard');
+        } elseif (session('customer.role') === 'user') {
+            return redirect('user/dashboard');
+        }
+
+        // fallback
+        return redirect('/');
     }
 }
