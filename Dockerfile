@@ -1,26 +1,29 @@
-# Base image PHP + Apache
-FROM php:8.2-apache
+# Step 1: Use official PHP image with required extensions
+FROM php:8.2-fpm
 
-# Enable PHP extensions required by Laravel
-RUN docker-php-ext-install pdo pdo_mysql
+# Install system dependencies and extensions
+RUN apt-get update && apt-get install -y \
+    git curl zip unzip libpng-dev libonig-dev libxml2-dev \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-# Install Composer
+# Install Composer globally
 COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www
 
-# Copy all project files
+# Copy existing application code
 COPY . .
 
-# Install dependencies (no dev in production)
+# Install PHP dependencies (Laravel)
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions for storage and cache
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+# Give permissions to storage and bootstrap
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
-# Expose port for Apache
-EXPOSE 80
+# Expose port 8000 for Laravel
+EXPOSE 8000
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Run Laravel's built-in server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
